@@ -1,0 +1,129 @@
+.page-container {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.form-card {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  margin-top: 2rem;
+}
+
+.form-card h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.form-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-card input,
+.form-card textarea {
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.form-card input:focus,
+.form-card textarea:focus {
+  border-color: #6a11cb;
+}
+
+.upload-label {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  border: 2px dashed #6a11cb;
+  border-radius: 10px;
+  text-align: center;
+  color: #6a11cb;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: background 0.3s;
+}
+
+.upload-label:hover {
+  background-color: #f0f0ff;
+}
+
+.gradient-button {
+  padding: 0.8rem;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.gradient-button:hover {
+  background: linear-gradient(90deg, #2575fc, #6a11cb);
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 2rem;
+}
+
+.item-card {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-image {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.item-card p {
+  margin: 0.25rem 0;
+  color: #333;
+}
+
+.status-badge {
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: white;
+}
+
+.status-badge.open {
+  background-color: #2575fc;
+}
+
+.status-badge.ongoing {
+  background-color: #f1c40f;
+}
+
+.status-badge.resolved {
+  background-color: #27ae60;
+}
