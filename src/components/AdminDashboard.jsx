@@ -29,7 +29,7 @@ function AdminDashboard() {
 
   const fetchItems = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/lost-items');
+      const res = await axios.get('https://api.lokihere.me/api/lost-items');
       setItems(res.data);
     } catch (err) {
       console.error('Error loading items:', err);
@@ -50,7 +50,7 @@ function AdminDashboard() {
   const handleStatusChange = async (id, newStatus) => {
     try {
       await axios.patch(
-        `http://localhost:5000/api/lost-items/${id}`,
+        `https://api.lokihere.me/api/lost-items/${id}`,
         { status: newStatus },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -65,7 +65,7 @@ function AdminDashboard() {
   const handleStar = async (id, current) => {
     try {
       await axios.patch(
-        `http://localhost:5000/api/lost-items/${id}`,
+        `https://api.lokihere.me/api/lost-items/${id}`,
         { starred: !current },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -80,7 +80,7 @@ function AdminDashboard() {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this item?')) {
       try {
-        await axios.delete(`http://localhost:5000/api/lost-items/${id}`, {
+        await axios.delete(`https://api.lokihere.me/api/lost-items/${id}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         toast.success('Item deleted!');
@@ -273,7 +273,7 @@ function AdminDashboard() {
 
       {modalImage && (
         <div className="modal" onClick={() => setModalImage(null)}>
-          <img src={`http://localhost:5000${modalImage}`} alt="Full View" />
+          <img src={`https://api.lokihere.me${modalImage}`} alt="Full View" />
         </div>
       )}
 
@@ -289,7 +289,7 @@ function AdminDashboard() {
             <p><strong>College Email ID:</strong> {viewItem.email}</p>
             {viewItem.image && (
               <img
-                src={`http://localhost:5000${viewItem.image}`}
+                src={`https://api.lokihere.me${viewItem.image}`}
                 alt="Lost Item"
                 className="details-modal-image"
               />
