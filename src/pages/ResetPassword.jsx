@@ -16,7 +16,7 @@ export default function ResetPassword() {
     }
 
     try {
-      await axios.post('http://localhost:5000/api/admin/confirm-reset', {
+      await axios.post('https://api.lokihere.me/api/admin/confirm-reset', {
         token,
         newPassword
       });
