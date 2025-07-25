@@ -13,7 +13,7 @@ export default function ForgotPassword() {
     }
 
     try {
-      await axios.post('http://localhost:5000/api/admin/request-reset', { email });
+      await axios.post('https://api.lokihere.me/api/admin/request-reset', { email });
       toast.success('Check your email for the reset link!');
     } catch (error) {
       toast.error(error.response?.data?.message || 'Error requesting reset');
