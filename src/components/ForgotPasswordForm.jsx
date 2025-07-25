@@ -14,7 +14,7 @@ function ForgotPasswordForm() {
       return;
     }
     try {
-      await axios.post('http://localhost:5000/api/admin/change-password', {
+      await axios.post('https://api.lokihere.me/api/admin/change-password', {
         oldPassword,
         newPassword,
       }, {
