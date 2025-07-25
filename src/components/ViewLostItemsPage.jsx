@@ -6,7 +6,7 @@ function ViewLostItemsPage() {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/lost-items').then(res => setItems(res.data));
+    axios.get('https://api.lokihere.me/api/lost-items').then(res => setItems(res.data));
   }, []);
 
   return (
@@ -15,7 +15,7 @@ function ViewLostItemsPage() {
       <div className="items-grid">
         {items.map((item) => (
           <div key={item.id} className="item-card">
-            {item.image && <img src={`http://localhost:5000${item.image}`} alt="Lost Item" className="item-image" />}
+            {item.image && <img src={`https://api.lokihere.me${item.image}`} alt="Lost Item" className="item-image" />}
             <p><strong>Name:</strong> {item.name}</p>
             <p><strong>Email:</strong> {item.email}</p>
             <p>{item.description}</p>
