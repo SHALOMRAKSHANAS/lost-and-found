@@ -88,7 +88,7 @@
   background-color: #fff;
   border-radius: 15px;
   padding: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(118, 45, 244, 0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -104,7 +104,7 @@
 
 .item-card p {
   margin: 0.25rem 0;
-  color: #333;
+  color: #dfc7c7;
 }
 
 .status-badge {
