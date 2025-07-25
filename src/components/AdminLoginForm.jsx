@@ -12,7 +12,7 @@ function AdminLoginForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/admin/login', 
+      const res = await axios.post('https://api.lokihere.me/api/admin/login', 
         { email, password },
         { headers: { 'Content-Type': 'application/json' } }
       );
