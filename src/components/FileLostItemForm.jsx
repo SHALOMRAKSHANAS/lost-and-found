@@ -24,7 +24,7 @@ function FileLostItemForm() {
     data.append('itemDescription', form.itemDescription);
     if (image) data.append('image', image);
 
-    await axios.post('http://localhost:5000/api/lost-items', data);
+    await axios.post('https://api.lokihere.me/api/lost-items', data);
     alert('Lost item filed successfully!');
     setForm({ name: '', phone: '', email: '', itemDescription: '' });
     setImage(null);
